@@ -157,3 +157,10 @@ php -r "echo ini_get('memory_limit').PHP_EOL;"
 
 echo "Run the integration tests"
 cd $MAGENTO_ROOT/dev/tests/integration && ../../../vendor/bin/phpunit -c phpunit.xml
+
+echo "Copy coverage report to workspace"
+if [ ! -d $MAGENTO_ROOT/dev/tests/integration/build/coverage ]; then
+    echo "Coverage folder does not exist"
+    exit 1
+fi
+cp -R $MAGENTO_ROOT/dev/tests/integration/build/coverage $GITHUB_WORKSPACE/coverage

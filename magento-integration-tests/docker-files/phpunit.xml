@@ -43,6 +43,20 @@
         <const name="TESTS_MAGENTO_MODE" value="developer"/>
         <const name="TESTS_ERROR_LOG_LISTENER_LEVEL" value="-1"/>
     </php>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">../../../vendor/%COMPOSER_NAME%</directory>
+        </include>
+        <exclude>
+            <directory>../../../vendor/%COMPOSER_NAME%/Test/Integration</directory>
+        </exclude>
+        <report>
+            <clover outputFile="coverage/clover.xml"/>
+            <html outputDirectory="coverage/html"/>
+            <cobertura outputFile="coverage/cobertura.xml"/>
+        </report>
+    </coverage>
+
     <listeners>
         <listener class="Magento\TestFramework\Event\PhpUnit"/>
         <listener class="Magento\TestFramework\ErrorLog\Listener"/>
