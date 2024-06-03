@@ -45,6 +45,14 @@
             <html outputDirectory="coverage/html"/>
         </report>
     </coverage>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../../../vendor/%COMPOSER_NAME%</directory>
+            <exclude>
+                <directory suffix=".php">../../../vendor/%COMPOSER_NAME%/Test/Integration</directory>
+            </exclude>
+        </whitelist>
+    </filter>
     <listeners>
         <listener class="Magento\TestFramework\Event\PhpUnit"/>
         <listener class="Magento\TestFramework\ErrorLog\Listener"/>
