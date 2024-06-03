@@ -159,8 +159,8 @@ echo "Run the integration tests, amwal"
 cd $MAGENTO_ROOT/dev/tests/integration && ../../../vendor/bin/phpunit -c phpunit.xml --coverage-cobertura=build/coverage/cobertura.xml
 
 echo "Copy coverage report to workspace"
-if [ ! -d $MAGENTO_ROOT/dev/tests/integration/build/coverage ]; then
+if [ ! -d $MAGENTO_ROOT/dev/tests/integration/coverage ]; then
     echo "Coverage folder does not exist"
     exit 1
 fi
-cp -R $MAGENTO_ROOT/dev/tests/integration/build/coverage $GITHUB_WORKSPACE/coverage
+cp -R $MAGENTO_ROOT/dev/tests/integration/coverage $GITHUB_WORKSPACE/coverage

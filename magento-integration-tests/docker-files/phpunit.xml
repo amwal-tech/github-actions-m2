@@ -16,16 +16,6 @@
             <directory suffix="Test.php">../../../vendor/%COMPOSER_NAME%/src/tests/integration</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <exclude>
-                <directory>../../../lib/internal/*/*/Test</directory>
-                <directory>../../../lib/internal/*/*/*/Test</directory>
-                <directory>../../../setup/src/*/*/Test</directory>
-                <directory>../../../vendor/*/*/Test</directory>
-            </exclude>
-        </whitelist>
-    </filter>
     <php>
         <includePath>.</includePath>
         <includePath>testsuite</includePath>
