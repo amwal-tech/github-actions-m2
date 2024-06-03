@@ -156,7 +156,7 @@ done
 php -r "echo ini_get('memory_limit').PHP_EOL;"
 
 echo "Run the integration tests"
-cd $MAGENTO_ROOT/dev/tests/integration && ../../../vendor/bin/phpunit -c phpunit.xml --coverage-cobertura=coverage/cobertura.xml
+cd $MAGENTO_ROOT/dev/tests/integration && ../../../vendor/bin/phpunit -c phpunit.xml --coverage-clover=coverage/clover.xml
 
 echo "Copy coverage report to workspace"
 if [ ! -d $MAGENTO_ROOT/dev/tests/integration/coverage ]; then
