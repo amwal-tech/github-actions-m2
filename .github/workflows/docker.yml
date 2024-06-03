@@ -24,7 +24,7 @@ jobs:
           - "php-compatibility"
 
     env:
-      DOCKER_USERNAME: "extdn"
+      DOCKER_USERNAME: "amwaltech"
 
     steps:
       - name: "Checkout"

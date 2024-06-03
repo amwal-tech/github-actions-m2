@@ -1,5 +1,5 @@
 name: 'Magento 2 integration tests'
-author: 'ExtDN'
+author: 'amwaltech'
 description: 'runs integration tests for given Magento 2 open source version'
 inputs:
   module_name:
@@ -42,7 +42,7 @@ inputs:
     default: '2'
 runs:
   using: 'docker'
-  image: 'docker://amwal-tech/magento-integration-tests-action:8.2-latest'
+  image: 'docker://amwaltech/magento-integration-tests-action:8.2-latest'
   env:
     COMPOSER_MEMORY_LIMIT: -1
 

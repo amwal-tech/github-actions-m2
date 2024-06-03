@@ -25,7 +25,7 @@ jobs:
         actions-with-docker-image:
           - "magento-integration-tests"
     env:
-      DOCKER_USERNAME: "extdn"
+      DOCKER_USERNAME: "amwaltech"
 
     steps:
       - name: "Checkout"
