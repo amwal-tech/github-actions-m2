@@ -1,7 +1,7 @@
 # Magento 2 Integration Tests
 To use this action, create a YAML file `.github/workflows/example.yml` in your extension folder, based upon the following contents:
 ```yaml
-name: ExtDN Actions
+name: amwaltech Actions
 on: [push]
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: M2 Integration Tests with Magento 2 (Php7.4)
-        uses: extdn/github-actions-m2/magento-integration-tests/7.4@master
+        uses: amwaltech/github-actions-m2/magento-integration-tests/7.4@master
         with:
           module_name: Foo_Bar
           composer_name: foo/magento2-foobar
@@ -41,7 +41,7 @@ Make sure to modify the following values:
 
 You could also choose to switch PHP version, by changing the tag of the Docker image:
 
-    - uses: extdn/github-actions-m2/magento-integration-tests/7.3@master
+    - uses: amwaltech/github-actions-m2/magento-integration-tests/7.3@master
 
 Additionally, you can add an environment variable `MAGENTO_PRE_INSTALL_SCRIPT` to run a script, after composer is
 configured, but before the composer installation is run. Likewise, you can customize your PHPUnit procedure by supplying
